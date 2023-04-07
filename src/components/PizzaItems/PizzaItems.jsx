@@ -9,12 +9,17 @@ function PizzaItems({ }) {
 
     //! Conditional rendering for Add/Delete button
     // dispatch
+   
     //! DELETE request
     // handle add
     // handle remove
 
+    // ! GET request
 
-//!What will display on the DOM
+
+
+    //!What will display on the DOM
+    //TODO need to pass through 
     return (
         <>
             <li>

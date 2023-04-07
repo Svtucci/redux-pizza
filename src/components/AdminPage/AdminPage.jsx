@@ -3,9 +3,16 @@ import { useSelector } from "react-redux";
 
 function AdminPage({ }) {
 
+
+
+    //! What will display on the DOM 
+    //TODO need to display the order and customer info 
+    
     return (
 
         <>
+
+
 
 
         </>

@@ -22,7 +22,7 @@ CD PRIME/TANZNAITE CMD PROMPT EXAMPLE
 4. Enter Customer Information - CustomerInfo
 5. Checkout Form - CheckoutForm
 6. Admin Page - AdminPage
-7. Header component - Header
+7. Header component - Header, will have total cost 
 
 
 
@@ -71,7 +71,6 @@ CD PRIME/TANZNAITE CMD PROMPT EXAMPLE
 2. After the checkout is complete, navigate the user back to the **select pizza** page AND clear out the reducers as appropriate
 3. Reset the cart, customer info etc
 4. Submit form event with onChange for each input
-
 
 
 <h4><u> AdminPage </u></h4> -Steve
