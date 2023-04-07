@@ -6,9 +6,21 @@ import PizzaItem from '../PizzaItem/PizzaItem';
 
 
 function PizzaList() {
+    //useHistory
+    
+    
+    
+    
+    
+    //! What will display on the DOM
     return (
         <>
+
+
+
+
+
         </>
-    )
-}
+    ) // End return
+} // End PizzaList ()
 export default PizzaList;

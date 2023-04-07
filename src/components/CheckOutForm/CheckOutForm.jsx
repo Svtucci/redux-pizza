@@ -5,6 +5,12 @@ import { useHistory } from "react-router-dom";
 
 function CheckOutForm () {
 
+//! Submit function, PUT info onto server
+// axios.post
+// history.push
+
+
+
     return (
         <>
 

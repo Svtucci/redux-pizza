@@ -22,7 +22,7 @@ CD PRIME/TANZNAITE CMD PROMPT EXAMPLE
 4. Enter Customer Information - CustomerInfo
 5. Checkout Form - CheckoutForm
 6. Admin Page - AdminPage
-7. Header component ???
+7. Header component - Header
 
 
 
