@@ -5,49 +5,35 @@ import { useDispatch, useSelector } from 'react-redux';
 //TODO import mui 
 
 
-function PizzaItems() {
+function PizzaItems( {pizza}) {
 const dispatch = useDispatch ();
+const cart = useSelector(store => store.cart);
 
-
-useEffect(() => {
-    fetchProducts ();
-}, []);
-    //! Conditional rendering for Add/Delete button
-    // dispatch
-   
-    const fetchProducts = () => {
-        axios.get('/api/pizza').then(response => {
-            const action ={ type: 'SET_PRODUCT_LIST', payload:
-            response.data };
-            dispatch(action);
-        }).catch(error => {
-            console.log('Error in fetch in pizzaItems', error);
-            alert('Something went wrong');
-        });
-    }
+const addPizzaToCart = () => {
+    console.log(product);
+}
     //! DELETE request
     // handle add
     // handle remove
 
-    // ! GET request
 
 
 
     //!What will display on the DOM
-    //TODO need to pass through 
     return (
         <>
         <h2>Pizza Items</h2>
             <li>
-
-
+        {pizza.name}: {pizza.price}{''}
+        {pizza.image_path}
+        <button onClick={addPizzaToCart}> Add To Cart</button>
 
 
             </li>
 
         </>
 
-    )// End return
+    );// End return
 } // end PizzaItems ()
 
 

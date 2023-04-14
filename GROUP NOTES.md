@@ -8,7 +8,7 @@ CD PRIME/TANZNAITE CMD PROMPT EXAMPLE
 
 <h2>Planning Steps</h2>
 
-1. ALL MEMBERS CREATE SQL DATABASE `pizza_parlor`
+[x] ALL MEMBERS CREATE SQL DATABASE `pizza_parlor`
     - SQL code is provided in file already 
 
  

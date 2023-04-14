@@ -1,32 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-function CheckOutForm({fetchProducts}) {
+
+function CheckOutForm({ fetchProducts }) {
 
 
 
+    let [productToAdd, setProductToAdd] = useState({ name: '', price: 0 });
 
-let [productToAdd, setProductToAdd] = useState({ name: '', price: 0 });
+    const handlePriceChange = (event) => {
+        setProductToAdd({ ...productToAdd, price: event.target.value, });
+    }
 
-const handlePriceChange = (event) => {
-    setProductToAdd({...productToAdd, price: event.target.value,});
-}
+    const handleNameChange = (event) => {
+        setProductToAdd({ ...productToAdd, name: event.target.value, });
+    }
 
-const handleNameChange = (event) => { setProductToAdd({...productToAdd,name: event.target.value,});
-}
+    const addProduct = (event) => {
+        event.preventDefault();
+    }
 
-const addProduct = (event) => {
-    event.preventDefault ();
-}
+    axios.post('/api/pizza', productToAdd).then(response => {
 
-axios.post('/api/pizza', productToAdd).then(response =>{
-
-}).catch(error =>{
-    alert('Something went wrong in axios.post in Form')
-    console.log(`error in addProduct POST ${error}`)
-})
+    }).catch(error => {
+        alert('Something went wrong in axios.post in Form')
+        console.log(`error in addProduct POST ${error}`)
+    })
     //! Submit function, PUT info onto server
     // axios.post
     // history.push
@@ -38,21 +39,21 @@ axios.post('/api/pizza', productToAdd).then(response =>{
 
     return (
         <>
- <form onSubmit={(event) => addProduct(event)}>
-      <input
-        onChange={handleNameChange}
-        type='text'
-        placeholder='name'
-      />
+            <form onSubmit={(event) => addProduct(event)}>
+                <input
+                    onChange={handleNameChange}
+                    type='text'
+                    placeholder='name'
+                />
 
-      <input
-        onChange={handlePriceChange}
-        type='text'
-        placeholder='price'
-      />
+                <input
+                    onChange={handlePriceChange}
+                    type='text'
+                    placeholder='price'
+                />
 
-      <button type='submit'>Submit</button>
-    </form>
+                <button type='submit'>Submit</button>
+            </form>
             {/* Add submit/checkout button linked to POST request */}
 
         </>
