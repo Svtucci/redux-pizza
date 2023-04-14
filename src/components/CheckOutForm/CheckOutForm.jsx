@@ -22,7 +22,10 @@ const addProduct = (event) => {
 }
 
 axios.post('/api/pizza', productToAdd).then(response =>{
-    
+
+}).catch(error =>{
+    alert('Something went wrong in axios.post in Form')
+    console.log(`error in addProduct POST ${error}`)
 })
     //! Submit function, PUT info onto server
     // axios.post
@@ -35,10 +38,22 @@ axios.post('/api/pizza', productToAdd).then(response =>{
 
     return (
         <>
+ <form onSubmit={(event) => addProduct(event)}>
+      <input
+        onChange={handleNameChange}
+        type='text'
+        placeholder='name'
+      />
 
+      <input
+        onChange={handlePriceChange}
+        type='text'
+        placeholder='price'
+      />
 
+      <button type='submit'>Submit</button>
+    </form>
             {/* Add submit/checkout button linked to POST request */}
-
 
         </>
     ) // End return

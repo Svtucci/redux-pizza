@@ -17,7 +17,8 @@ function PizzaList() {
     //history.push
     const nextPage = (event) => {
         event.preventDefault();
-        //if (activityType.length > 0) {
+        //if (arrayNameHere.length > 0) 
+        { 
             history.push('/CustomerInfo');
         } else {
             alert('Please add an activity type.');
