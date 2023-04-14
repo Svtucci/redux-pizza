@@ -5,13 +5,12 @@ function Header () {
 
     //!What will display on the DOM
     //TODO need to display total cost
-    return {
-        <>
+    return (
 
+        <>
         
         </>
-
-    }
+    )
 }
 
 export default Header;

@@ -17,12 +17,12 @@ CD PRIME/TANZNAITE CMD PROMPT EXAMPLE
 <h3> Components </h3>
 
 1. App page- App
-2. Select Pizza - PizzaList
+2. Select Pizza - PizzaList (direct route)
 3. Pizza Items- PizzaItem
-4. Enter Customer Information - CustomerInfo
-5. Checkout Form - CheckoutForm
-6. Admin Page - AdminPage
-7. Header component - Header, will have total cost 
+4. Enter Customer Information - CustomerInfo (direct route)
+5. Checkout Form - CheckoutForm (direct route)
+6. Admin Page - AdminPage (direct route)
+7. Header component - Header, will have total cost  (direct route)
 
 
 

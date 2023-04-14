@@ -3,8 +3,18 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-function CheckOutForm() {
+function CheckOutForm({fetchProducts}) {
 
+
+
+
+let [productToAdd, setProductToAdd] = useState({ name: '', price: 0 });
+
+const handlePriceChange = (event) => {
+    setProductToAdd({...productToAdd, price: event.target.value,});
+}
+
+const handleNameChange = (event) => {}
     //! Submit function, PUT info onto server
     // axios.post
     // history.push
