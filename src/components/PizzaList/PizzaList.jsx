@@ -2,7 +2,7 @@ import React from 'react';
 import { useHashRouter as Router, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './PizzaList.css';
-import PizzaItem from '../PizzaItem/PizzaItem';
+import PizzaItems from '../PizzaItems/PizzaItems';
 
 
 function PizzaList() {
@@ -15,7 +15,14 @@ function PizzaList() {
 
 
     //history.push
-
+    const nextPage = (event) => {
+        event.preventDefault();
+        //if (activityType.length > 0) {
+            history.push('/CustomerInfo');
+        } else {
+            alert('Please add an activity type.');
+        }
+    }
 
 
     //! GET request
@@ -31,7 +38,7 @@ function PizzaList() {
     return (
         <>
 
-            <PizzaItem />
+            <PizzaItems />
 
         <button onClick= {nextPage} > Next </button>
         </>

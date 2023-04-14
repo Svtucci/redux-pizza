@@ -14,7 +14,16 @@ const handlePriceChange = (event) => {
     setProductToAdd({...productToAdd, price: event.target.value,});
 }
 
-const handleNameChange = (event) => {}
+const handleNameChange = (event) => { setProductToAdd({...productToAdd,name: event.target.value,});
+}
+
+const addProduct = (event) => {
+    event.preventDefault ();
+}
+
+axios.post('/api/pizza', productToAdd).then(response =>{
+    
+})
     //! Submit function, PUT info onto server
     // axios.post
     // history.push
