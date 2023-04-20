@@ -27,7 +27,7 @@ function PizzaItems({ pizza }) {
                 <img src={pizza.image_path} />
                 <br />
                 {pizza.price}
-                
+                <br />
                 <button onClick={addPizzaToCart}> Add To Cart</button>
 
 
