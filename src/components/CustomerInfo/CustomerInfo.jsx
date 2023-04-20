@@ -15,45 +15,54 @@ function CustomerInfo () {
     const history = useHistory();
     const dispatch = useDispatch(); 
 
-const handleSubmit =(event) => {
+
+ const name = useSelector(store => store.name);
+ const address = useSelector(store => store.address);
+ const city = useSelector(store => store.city);
+ const zipCode = 
+ 
+ 
+ const addCustomer = (event) => {
     event.preventDefault();
-
-    if ( 
-        CustomerInfo.name&& 
-        customerInfo.address &&
-        customerInfo.city &&
-        customerInfo.zip &&
-        customerInfo.type
-    ) {
-        console.log("submitting customer, customer is:", customerInfo);
-        dispatch({ type: "SET_CUSTOMER", payload: customerInfo });
-        goToCheckout();
-    } else {
-        setIncompleteMessage(true);
-        setTimeout(() => {
-        setIncompleteMessage(false);
-      }, 5000);
-    }
-  };
-
-  const handleTypeChange = (event) => {
-    setCustomerInfo({
-      ...customerInfo,
-      type: event.target.value,
-    });
+    history.push('/checkout');
 };
 
+// const handleSubmit =(event) => {
+//     event.preventDefault();
 
+//     if ( 
+//         customerInfo.name && 
+//         customerInfo.address &&
+//         customerInfo.city &&
+//         customerInfo.zip &&
+//         customerInfo.type
+//     ) {
+//         console.log("submitting customer, customer is:", customerInfo);
+//         dispatch({ type: "SET_CUSTOMER", payload: customerInfo });
+//         goToCheckout();
+//     } else {
+//         setIncompleteMessage(true);
+//         setTimeout(() => {
+//         setIncompleteMessage(false);
+//       }, 5000);
+//     }
+//   };
 
+//   const handleTypeChange = (event) => {
+//     setCustomerInfo({
+//       ...customerInfo,
+//       type: event.target.value,
+//     });
+// };
 
     
-    const nextPage = () => {
-        if(name.length > 0) {
-            history.push('/CheckOutForm');
-        } else {
-            alert('Please add a person.'); 
-        }
-    }
+//     const nextPage = () => {
+//         if(name.length > 0) {
+//             history.push('/CheckOutForm');
+//         } else {
+//             alert('Please add a person.'); 
+//         }
+//     }
 
     return(
         <>
@@ -79,7 +88,7 @@ const handleSubmit =(event) => {
     )
 }
 
-export default CustomerInfo
+export default CustomerInfo;
 
 
 

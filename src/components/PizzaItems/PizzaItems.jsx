@@ -28,8 +28,7 @@ function PizzaItems({ pizza }) {
                 <br />
                 {pizza.price}
                 <br />
-                <button onClick={addPizzaToCart}> Add To Cart</button>
-
+                <button onClick={addPizzaToCart}>Add To Cart</button>
 
             </li>
 

@@ -40,7 +40,7 @@ function App() {
           <CheckOutForm />
         </Route>
 
-        <img src='images/pizza_photo.png' />
+        {/* <img src='images/pizza_photo.png' /> */}
         <p>Pizza is great.</p>
       </Router>
     </div>

@@ -49,16 +49,15 @@ function PizzaList() {
     //TODO need to pass PizzaItems
     return (
         <>
+        <div>
             <ul>
                 {pizzaMenu.map((pizza, i) => {
-                    return <PizzaItems key={i}
-                        pizza={pizza}
-                         />;
-
+                    return <PizzaItems key={i} pizza={pizza} />;
                 })}
             </ul>
-
-            <button onClick={nextPage} > Next </button>
+        </div>
+        <br />
+            <button onClick={nextPage}>Next</button>
 
         </>
 

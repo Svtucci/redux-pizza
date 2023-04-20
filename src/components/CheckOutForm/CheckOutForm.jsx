@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 function CheckOutForm({ fetchProducts }) {
 
-const customerName = useSelector (store => store.custormerName);
+// const customerName = useSelector (store => store.custormerName);
 
 
     let [productToAdd, setProductToAdd] = useState({ name: '', price: 0 });
