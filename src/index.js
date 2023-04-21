@@ -45,7 +45,7 @@ const city = (state = '', action) => {
 };
 
 const zipCode = (state = '', action) => {
-    if (action.type === 'SET ZIP_CODE') {
+    if (action.type === 'SET_ZIP_CODE') {
         return action.payload;
     } else if (action.type === 'CLEAR_FORM') {
         return ''

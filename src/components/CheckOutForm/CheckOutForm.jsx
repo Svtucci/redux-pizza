@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 function CheckOutForm({ fetchProducts }) {
 
-// const customerName = useSelector (store => store.custormerName);
+    // const customerName = useSelector (store => store.custormerName);
 
 
     let [productToAdd, setProductToAdd] = useState({ name: '', price: 0 });
@@ -24,7 +24,7 @@ function CheckOutForm({ fetchProducts }) {
     }
 
     axios.post('/api/pizza', productToAdd).then(response => {
-
+        
     }).catch(error => {
         alert('Something went wrong in axios.post in Form')
         console.log(`error in addProduct POST ${error}`)
