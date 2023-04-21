@@ -6,14 +6,18 @@ import './PizzaList.css';
 import PizzaItems from '../PizzaItems/PizzaItems';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 function PizzaList() {
     // Should we use redux here, or useState 
     const dispatch = useDispatch();
     const history = useHistory();
     //might want to change this var name 
-    const [pizzaMenu, setPizzaMenu] = useState([]); 
+    const [pizzaMenu, setPizzaMenu] = useState([]);
 
 
     //history.push
@@ -30,9 +34,9 @@ function PizzaList() {
 
     //!GET request
     const fetchPizzaMenu = () => {
-            axios.get('/api/pizza').then((response) => {
-                setPizzaMenu(response.data); 
-            }).catch(error => {
+        axios.get('/api/pizza').then((response) => {
+            setPizzaMenu(response.data);
+        }).catch(error => {
             console.log('Error in fetch in pizzaItems', error);
             alert('Something went wrong');
         });
@@ -40,7 +44,7 @@ function PizzaList() {
 
     useEffect(() => {
         fetchPizzaMenu();
-    }, []); 
+    }, []);
 
     //! POST request
 
@@ -48,18 +52,17 @@ function PizzaList() {
     //! What will display on the DOM
     //TODO need to pass PizzaItems
     return (
-        <>
+
         <div>
-            <ul>
+            <Card>
                 {pizzaMenu.map((pizza, i) => {
                     return <PizzaItems key={i} pizza={pizza} />;
                 })}
-            </ul>
+            </Card>
+            <br />
+            <Button onClick={nextPage}>Next</Button>
         </div>
-        <br />
-            <button onClick={nextPage}>Next</button>
 
-        </>
 
     ) // End return
 } // End PizzaList ()
