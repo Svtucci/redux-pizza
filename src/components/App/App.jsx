@@ -17,13 +17,13 @@ function App() {
   return (
     <div>
       <Router>
-        <Route exact path="/header" className='App-header'>
+        {/* <Route exact path="/header" className='App-header'>
           <h1 Name='App' className='App-title'>Prime Pizza</h1>
           <Link to="/CheckOutForm">Checkout</Link>
           <Link to="/CustomerInfo">CustomerInfo</Link>
           <Link to="/PizzaList">Pizza List </Link>
-        </Route>
-
+        </Route> */}
+        <Header />
         <Route exact path="/">
           <PizzaList />
         </Route>

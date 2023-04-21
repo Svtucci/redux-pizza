@@ -54,11 +54,11 @@ function PizzaList() {
     return (
 
         <div>
-            <Card>
+            <ul>
                 {pizzaMenu.map((pizza, i) => {
                     return <PizzaItems key={i} pizza={pizza} />;
                 })}
-            </Card>
+            </ul>
             <br />
             <Button onClick={nextPage}>Next</Button>
         </div>

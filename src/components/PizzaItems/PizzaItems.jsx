@@ -2,6 +2,11 @@ import React from 'react';
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button'; 
 //TODO import mui 
 
 
@@ -21,16 +26,22 @@ function PizzaItems({ pizza }) {
     return (
         <>
             
-            <li>
+            <Card
+            sx={{
+                display: 'block',
+            justifyContent: 'center',
+            border: 2,
+            margin: 2,
+            boxShadow: 10,}}>
                 <h3>{pizza.name}:</h3> {''}
                 <br />
                 <img src={pizza.image_path} />
                 <br />
                 {pizza.price}
                 <br />
-                <button onClick={addPizzaToCart}>Add To Cart</button>
+                <Button onClick={addPizzaToCart}>Add To Cart</Button>
 
-            </li>
+            </Card>
 
         </>
 
