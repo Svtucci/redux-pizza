@@ -1,22 +1,22 @@
 OUR RETROSPECTIVE TALK
 
 Things we did right: 
-    * We had a great plan, everything seemed to be comportmentalized
-    * We did pull request correctly, albeit small pull requests
-    * We implemented MUI on the menu page
-    * We got 3 pages working for a time 
-    * WE STAYED POSITIVE and COMMUNICATED on what was being worked on
+* We had a great plan, everything seemed to be comportmentalized
+* We did pull request correctly, albeit small pull requests
+* We implemented MUI on the menu page
+* We got 3 pages working for a time 
+* WE STAYED POSITIVE and COMMUNICATED on what was being worked on
 
 
 Things we did wrong: 
-    * We should have left more details where we left off
-    * Could have been more organized with all the reducers and links
-    * We should have created a checklist, instead of just having a giant list
-    * Create a freeform 
+* We should have left more details where we left off
+* Could have been more organized with all the reducers and links
+* We should have created a checklist, instead of just having a giant list
+* Create a freeform 
     
 
 Other comments...
-    We got the menu, customerinfo, checkoutform, although ran into some obstalces to get base functionality working. 
+   * We got the menu, customerinfo, checkoutform, although ran into some obstalces to get base functionality working. 
 
 
 
