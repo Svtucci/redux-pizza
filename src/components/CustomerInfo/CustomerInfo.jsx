@@ -30,33 +30,36 @@ function CustomerInfo() {
         history.push('/CheckOutForm');
     };
 
-    const nameChange = (event) => {
-        const action = { type: 'SET_CUSTOMER_NAME', payload: event.target.value }
+    const handleNameChange = (event) => {
+        const action = { type: 'SET_CUSTOMER_NAME', payload: event.target.value } 
+        dispatch(action);
 
-        const addressChange = (event) => {
+        const handleAddressChange= (event) => {
             const action = { type: 'ADD_STREET_ADDRESS', payload: event.target.value }
+            dispatch(action);
         };
 
-        const addCity = (event) => {
+        const handleAddCity = (event) => {
             const action = { type: 'ADD_CITY', payload: event.target.value }
+            dispatch(action);
         };
 
-        const addZipCode = (event) => {
+        const handleAddZipCode = (event) => {
             const action = { type: 'SET_ZIP_CODE', payload: event.target.value };
             dispatch(action);
         };
 
-        const setPickup = (event) => {
+        const handleSetPickup = (event) => {
             const action = { type: 'SET_PICKUP', payload: event.target.value };
             dispatch(action);
         };
 
-        const setDelivery = (event) => {
+        const handleSetDelivery = (event) => {
             const action = { type: 'SET_DELIVERY', payload: event.target.value };
             dispatch(action);
         }
 
-        const previousPage = () => {
+        const handlePreviousPage = () => {
             history.push('/select')
         }
 
@@ -71,6 +74,7 @@ function CustomerInfo() {
                     label="Name"
                     value={name}
                     type="text"
+                    onChange={handleNameChange}
                     fullWidth
                     margin="normal"
                 />
@@ -79,6 +83,7 @@ function CustomerInfo() {
                     label="Street Address"
                     value={street}
                     type="text"
+                    onChange={handleAddressChange}
                     fullWidth
                     margin="normal"
                 />
@@ -88,7 +93,7 @@ function CustomerInfo() {
                     label="City"
                     value={city}
                     type="text"
-                   
+                    onChange={handleCityChange}
                     fullWidth
                     margin="normal"
                 />
@@ -98,54 +103,26 @@ function CustomerInfo() {
                     label="Zipcode"
                     value={zipCode}
                     type="number"
-                  
+                    onChange={handleZipCodeChange}
                     fullWidth
                     margin="normal"
                 />
 
-                <RadioGroup aria-label="delivery" name="delivery" value={delivery} >
+                <RadioGroup aria-label="delivery" name="delivery" value={delivery} onChange={handleDeliveryChange}>
                     <FormControlLabel value="true" control={<Radio />} label="Delivery" />
                 </RadioGroup>
 
-                <RadioGroup aria-label="pickup" name="pickup" value={pickup} >
+                <RadioGroup aria-label="pickup" name="pickup" value={pickup} onChange={handlePickupChange}>
                     <FormControlLabel value="true" control={<Radio />} label="Pickup" />
                 </RadioGroup>
 
             </form>
 
-            <Button variant="contained" >Previous</Button>
-            <Button variant="contained" >Next</Button>
+            <Button variant="contained" onClick={handlePreviousPage} >Previous</Button>
+            <Button variant="contained" onClick={nextPage}>Next</Button>
         </>
     )
-                // <label htmlFor="name">Name:</label><br />
-                // <input id="name" value={name} type="text" />
-                // <br />
-                
-                // <label htmlFor="street">Street Address:</label><br />
-                // <input id="street" value={street} type="text" />
-                // <br />
-                // <label htmlFor="city">City:</label><br />
-                // <input id="city" value={city} type="text" />
-                // <br />
-                // <label htmlFor="zip">Zipcode:</label><br />
-                // <input id="zip" value={zipCode} type="number" />
-                // <br />
-                // <label htmlFor="delivery">Delivery:</label><br />
-                // <input id="delivery" value={delivery} type="radio" />
-                // <br />
-                // <label htmlFor="pickup">Pickup:</label><br /> 
-                // <input id="pickup" value={pickup} type="radio" />
-                
-                // <br />
-
-            // </form>
-
-        //     <RadioGroup aria-label="delivery" name="delivery" value={delivery} >
-        //             <FormControlLabel value="true" control={<Radio />} label="Delivery" />
-        //         </RadioGroup>
-
-        //     <Button onClick={nextPage}>Next</Button>
-        // </>
+              
     
 }
 
