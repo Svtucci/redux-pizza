@@ -10,13 +10,14 @@ function CustomerInfo() {
 
 
     const name = useSelector(store => store.name);
-    const address = useSelector(store => store.address);
+    const address = useSelector(store => store.streetAddress);
     const city = useSelector(store => store.city);
     const zipCode = useSelector(store => store.zipCode);
     const street = useSelector(store => store.street);
     const delivery = useSelector(store => store.delivery);
     const pickup = useSelector(store => store.pickup);
 
+    
     const nextPage = (event) => {
         event.preventDefault();
         {
@@ -34,36 +35,36 @@ function CustomerInfo() {
         const action = { type: 'SET_CUSTOMER_NAME', payload: event.target.value } 
         dispatch(action);
 
-        const handleAddressChange= (event) => {
+        const handleAddressChange = (event) => {
             const action = { type: 'ADD_STREET_ADDRESS', payload: event.target.value }
             dispatch(action);
         };
 
-        const handleAddCity = (event) => {
+        const handleAddCityChange = (event) => {
             const action = { type: 'ADD_CITY', payload: event.target.value }
             dispatch(action);
         };
 
-        const handleAddZipCode = (event) => {
+        const handleAddZipCodeChange = (event) => {
             const action = { type: 'SET_ZIP_CODE', payload: event.target.value };
             dispatch(action);
         };
 
-        const handleSetPickup = (event) => {
+        const handlePickupChange = (event) => {
             const action = { type: 'SET_PICKUP', payload: event.target.value };
             dispatch(action);
         };
 
-        const handleSetDelivery = (event) => {
+        const handleDeliveryChange = (event) => {
             const action = { type: 'SET_DELIVERY', payload: event.target.value };
             dispatch(action);
-        }
+        };
 
         const handlePreviousPage = () => {
             history.push('/select')
-        }
+        };
 
-    }
+    
     return (
         <>
             <h3>Customer Information</h3>
@@ -77,6 +78,16 @@ function CustomerInfo() {
                     onChange={handleNameChange}
                     fullWidth
                     margin="normal"
+                />
+
+                <TextField
+                id = "street"
+                lable="Street Address"
+                value={street}
+                type= "text"
+                onChange= {handleAddressChange}
+                fullWidth
+                margin="normal"
                 />
                 <TextField
                     id="street"
@@ -93,7 +104,7 @@ function CustomerInfo() {
                     label="City"
                     value={city}
                     type="text"
-                    onChange={handleCityChange}
+                    onChange={handleAddCityChange}
                     fullWidth
                     margin="normal"
                 />
@@ -103,7 +114,7 @@ function CustomerInfo() {
                     label="Zipcode"
                     value={zipCode}
                     type="number"
-                    onChange={handleZipCodeChange}
+                    onChange={handleAddZipCodeChange}
                     fullWidth
                     margin="normal"
                 />
@@ -123,7 +134,7 @@ function CustomerInfo() {
         </>
     )
               
-    
+    }  
 }
 
 export default CustomerInfo;

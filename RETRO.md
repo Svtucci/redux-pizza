@@ -1,11 +1,13 @@
 OUR RETROSPECTIVE TALK
 
 Things we did right: 
-We had a great plan, everything seemed to be comportmentazlied 
+    - We had a great plan, everything seemed to be comportmentazlied
+    - 
 
 
 Things we did so very wrong: 
-
+    - We should have left more details where we left off
+    - 
 
 
 
